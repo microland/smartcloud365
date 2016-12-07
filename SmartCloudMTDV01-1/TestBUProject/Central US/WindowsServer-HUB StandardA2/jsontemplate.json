@@ -1,0 +1,43 @@
+{
+  "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "vmName": {
+      "type": "string",
+      "metadata": {
+        "description": "Name of the VM",
+        "type": "string",
+        "displayname": "VM Name"
+      }
+    },
+    "adminUsername": {
+      "type": "string",
+      "metadata": {
+        "description": "Username for the VM",
+        "type": "string",
+        "displayname": "Username"
+      }
+    },
+    "adminPassword": {
+      "type": "securestring",
+      "metadata": {
+        "description": "Password for the VM",
+        "type": "securestring",
+        "displayname": "Password"
+      }
+    }
+  },
+  "variables": {
+    "vmSize": "Standard_A2",
+    "imagePublisher": "MicrosoftWindowsServer",
+    "imageOffer": "WindowsServer-HUB",
+    "imageSKU": "2008-R2-SP1-HUB"
+  },
+  "resources": [],
+  "outputs": {},
+  "smc365attributes": {
+    "appProfileName": "TestBUProjectRG",
+    "appProfileId": 1,
+    "osType": "Windows"
+  }
+}
