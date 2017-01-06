@@ -1,0 +1,56 @@
+{
+  "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "vmName": {
+      "type": "string",
+      "metadata": {
+        "description": "Name of the VM",
+        "type": "string",
+        "displayname": "VM Name"
+      }
+    },
+    "adminUsername": {
+      "type": "string",
+      "metadata": {
+        "description": "Username for the VM",
+        "type": "string",
+        "displayname": "Username"
+      }
+    },
+    "adminPassword": {
+      "type": "securestring",
+      "metadata": {
+        "description": "Password for the VM",
+        "type": "securestring",
+        "displayname": "Password"
+      }
+    },
+    "vmSize": {
+      "type": "string",
+      "allowedValues": [
+        "Standard_A0",
+        "Basic_A0",
+        "Basic_A1"
+      ],
+      "metadata": {
+        "description": "Size of the VM",
+        "type": "ddl",
+        "displayname": "Size of the VM"
+      }
+    }
+  },
+  "variables": {
+    "imagePublisher": "Canonical",
+    "imageOffer": "Ubuntu_Snappy_Core_Docker",
+    "imageSKU": "15.04"
+  },
+  "resources": [],
+  "outputs": {},
+  "smc365attributes": {
+    "appProfileName": "tesdemapfrsg016",
+    "appProfileId": 19,
+    "osType": "Linux",
+    "templateDescription": "Description"
+  }
+}
