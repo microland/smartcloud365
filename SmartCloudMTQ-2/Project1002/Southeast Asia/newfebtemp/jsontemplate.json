@@ -1,0 +1,47 @@
+{
+  "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "vmName": {
+      "type": "string",
+      "metadata": {
+        "description": "Name of the VM",
+        "type": "string",
+        "displayname": "VM Name"
+      }
+    },
+    "adminUsername": {
+      "type": "string",
+      "metadata": {
+        "description": "Username for the VM",
+        "type": "string",
+        "displayname": "Username"
+      }
+    },
+    "adminPassword": {
+      "type": "securestring",
+      "metadata": {
+        "description": "Password for the VM",
+        "type": "securestring",
+        "displayname": "Password"
+      }
+    }
+  },
+  "variables": {
+    "vmSize": "Basic_A0",
+    "imagePublisher": "4psa",
+    "imageOffer": "voipnow",
+    "imageSKU": "vnp360-single"
+  },
+  "resources": [],
+  "outputs": {},
+  "smc365attributes": {
+    "appProfileName": "tesproapfrsg002",
+    "appProfileId": 31,
+    "smcImageId": 3,
+    "osType": "Linux",
+    "allowUserToSelectBuild": false,
+    "templateDescription": "new",
+    "planInfoNeeded": true
+  }
+}
