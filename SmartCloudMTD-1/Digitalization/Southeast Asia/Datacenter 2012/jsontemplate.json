@@ -2,14 +2,6 @@
   "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
   "contentVersion": "1.0.0.0",
   "parameters": {
-    "vmName": {
-      "type": "string",
-      "metadata": {
-        "description": "Name of the VM",
-        "type": "string",
-        "displayname": "VM Name"
-      }
-    },
     "adminUsername": {
       "type": "string",
       "metadata": {
@@ -40,6 +32,8 @@
     "appProfileId": 2,
     "smcImageId": 2,
     "osType": "Windows",
-    "templateDescription": "Windows Server 2012 Datacenter"
+    "templateDescription": "Windows Server 2012 Datacenter",
+    "allowUserToSelectBuild": false,
+    "planInfoNeeded": false
   }
 }
