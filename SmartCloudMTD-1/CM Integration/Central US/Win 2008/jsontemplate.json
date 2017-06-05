@@ -2,14 +2,6 @@
   "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
   "contentVersion": "1.0.0.0",
   "parameters": {
-    "vmName": {
-      "type": "string",
-      "metadata": {
-        "description": "Name of the VM",
-        "type": "string",
-        "displayname": "VM Name"
-      }
-    },
     "adminUsername": {
       "type": "string",
       "metadata": {
@@ -52,6 +44,8 @@
     "appProfileId": 3,
     "smcImageId": 1,
     "osType": "Windows",
-    "templateDescription": "Windows Server 2008 R2 SP1"
+    "templateDescription": "Windows Server 2008 R2 SP1",
+    "allowUserToSelectBuild": false,
+    "planInfoNeeded": false
   }
 }
